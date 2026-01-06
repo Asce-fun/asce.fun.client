@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+import LeadCaptureCard from "./components/captureCard";
 
 export default function Home() {
   const { setShowAuthFlow, primaryWallet, handleLogOut } = useDynamicContext();
@@ -588,51 +589,7 @@ export default function Home() {
             </div>
 
             {/* 2/3: Handle Claim / CTA */}
-            <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br border p-6 md:p-8 hover:border-orange-500/30 transition-all duration-300 md:col-span-2 flex flex-col justify-center items-center text-center from-neutral-900 to-neutral-950 border-neutral-800">
-              <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
-
-              <div className="relative z-10 w-full max-w-lg">
-                <h2 className="font-mono text-2xl font-semibold mb-2 tracking-tight text-white">
-                  For Analysts, Not Gamblers
-                </h2>
-                <p className="text-sm mb-6 text-neutral-400">
-                  Built for fantasy sports enthusiasts, data nerds, and anyone
-                  tired of binary outcomes.
-                </p>
-
-                <form className="flex flex-col gap-3 w-full">
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <div className="relative flex-1">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <span className="text-neutral-500 text-sm font-mono">
-                          @
-                        </span>
-                      </div>
-                      <input
-                        type="text"
-                        placeholder="username"
-                        className="w-full pl-8 pr-4 py-3 bg-neutral-950 border border-neutral-700 rounded-lg text-sm text-white placeholder-neutral-700 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 font-mono transition-all"
-                        required
-                      />
-                    </div>
-                    <input
-                      type="email"
-                      placeholder="enter_your_email"
-                      className="flex-[1.5] border text-sm rounded-lg px-4 py-3 outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 transition-all font-mono placeholder:text-neutral-700 bg-neutral-950 border-neutral-700 text-neutral-200"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-orange-600 hover:bg-orange-500 text-white font-semibold py-3 rounded-lg text-sm tracking-tight transition-all"
-                  >
-                    CLAIM HANDLE
-                  </button>
-                </form>
-                <p className="mt-4 text-[10px] font-mono text-neutral-600">
-                  LIMITED SPOTS FOR BETA ACCESS • LAUNCHING Q1 2025
-                </p>
-              </div>
-            </div>
+            <LeadCaptureCard/>
           </div>
         </div>
 
